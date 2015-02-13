@@ -32,7 +32,7 @@ Sub RedditTable()
     
     For mCol = startCol To endCol
         ' Setting column alignment based on alignment of first row in column
-        cellAlignment = Range(Cells(1, mCol), Cells(1, mCol)).HorizontalAlignment
+        cellAlignment = Range(Cells(selection.Row, mCol), Cells(selection.Row, mCol)).HorizontalAlignment
         If cellAlignment = xlRight Then
             colAlignment = ":-| "
         ElseIf cellAlignment = xlCenter Then
