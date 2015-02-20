@@ -31,8 +31,10 @@ Sub RedditTable()
     ReDim outputArray(0 To endRow) As String
     
     For mCol = startCol To endCol
-        ' Setting column alignment based on alignment of first row in column
-        cellAlignment = Range(Cells(selection.Row, mCol), Cells(selection.Row, mCol)).HorizontalAlignment
+        ' Setting column alignment based on alignment of first row in current column
+        Dim currentColumn As Integer
+        currentColumn = selection.Column + mCol - 1
+        cellAlignment = Range(Cells(selection.Row, currentColumn), Cells(selection.Row, currentColumn)).HorizontalAlignment
         If cellAlignment = xlRight Then
             colAlignment = ":-| "
         ElseIf cellAlignment = xlCenter Then
