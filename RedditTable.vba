@@ -36,11 +36,11 @@ Sub RedditTable()
         currentColumn = selection.Column + mCol - 1
         cellAlignment = Range(Cells(selection.Row, currentColumn), Cells(selection.Row, currentColumn)).HorizontalAlignment
         If cellAlignment = xlRight Then
-            colAlignment = ":-| "
+            colAlignment = "-:| "
         ElseIf cellAlignment = xlCenter Then
             colAlignment = ":-:| "
         Else
-            colAlignment = "-:| "
+            colAlignment = ":-| "
         End If
     
         For mRow = startRow To endRow
